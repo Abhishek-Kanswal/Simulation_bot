@@ -1,4 +1,8 @@
-const TelegramBot = require("node-telegram-bot-api");
+const TelegramBotModule = require("node-telegram-bot-api");
+const TelegramBot =
+  TelegramBotModule.default ||
+  TelegramBotModule.TelegramBot ||
+  TelegramBotModule;
 const axios = require("axios");
 const express = require("express");
 const cors = require("cors");
